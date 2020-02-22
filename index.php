@@ -18,6 +18,13 @@ echo ("<br> La multiplicación de los numeros 15 * 34 es ".$multiplicacion);
 echo ("<br> La división de los numeros 15 / 34 es ".$division);
 
 
+/*punto 2 del taller indice de masa corporal*/ 
+$peso=85;
+$estatura=178;
+$imc=$peso/($altura*$altura);
+
+
+
 
 
 ?>
