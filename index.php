@@ -48,6 +48,39 @@ if ($imc<=18.4 && $imc>0)
 }
 
 
+/*punto tres, descuento por cantidadde pares comprados*/
+echo "<br><br>Ejercicio 3 <br>";
+
+$cantidadZapatosVendidos=5;
+$valorporPar=150000;
+$totalVenta=$cantidadZapatosVendidos*$valorporPar;
+$descuento1=0.20;
+/*$descuento2=0.20;
+$descuento3=0.40;*/
+
+echo "Cantidad vendida: ".$cantidadZapatosVendidos;
+echo "<br>Costo Neto: ".$totalVenta;
+
+
+if($cantidadZapatosVendidos<=3){
+    $totalVenta*0.10==$descuento1;
+    echo "<br>Descuento: 10%";
+}elseif($cantidadZapatosVendidos>3||$cantidadZapatosVendidos<=5){
+    $totalVenta*0.20==$descuento1;
+    echo "<br>Descuento: 20%";
+}elseif($cantidadZapatosVendidos>5){
+    $totalVenta*0.40==$descuento1;
+    echo "<br>Descuento: 40%";
+}
+
+$valorDescuento=$totalVenta*$descuento1;
+$valorTotalPagar=$totalVenta-$valorDescuento;
+
+echo "<br>Valor del descuento: ".$valorDescuento;
+echo "<br>Valor total a pagar: ".$valorTotalPagar;
+
+
+
 
 
 
