@@ -54,9 +54,9 @@ echo "<br><br>Ejercicio 3 <br>";
 $cantidadZapatosVendidos=5;
 $valorporPar=150000;
 $totalVenta=$cantidadZapatosVendidos*$valorporPar;
-$descuento1=0.20;
-/*$descuento2=0.20;
-$descuento3=0.40;*/
+$descuento1=0;
+$valorDescuento=$totalVenta*$descuento1;
+$valorTotalPagar=$totalVenta-$valorDescuento;
 
 echo "Cantidad vendida: ".$cantidadZapatosVendidos;
 echo "<br>Costo Neto: ".$totalVenta;
@@ -65,19 +65,40 @@ echo "<br>Costo Neto: ".$totalVenta;
 if($cantidadZapatosVendidos<=3){
     $totalVenta*0.10==$descuento1;
     echo "<br>Descuento: 10%";
-}elseif($cantidadZapatosVendidos>3||$cantidadZapatosVendidos<=5){
+}elseif($cantidadZapatosVendidos>3 && $cantidadZapatosVendidos<=5){
     $totalVenta*0.20==$descuento1;
     echo "<br>Descuento: 20%";
+    echo "<br>Valor del descuento: ".$valorDescuento;
+    echo "<br>Valor total a pagar: ".$valorTotalPagar;
+
 }elseif($cantidadZapatosVendidos>5){
-    $totalVenta*0.40==$descuento1;
+    $descuento1=0.40*$totalVenta;
     echo "<br>Descuento: 40%";
 }
 
-$valorDescuento=$totalVenta*$descuento1;
-$valorTotalPagar=$totalVenta-$valorDescuento;
 
-echo "<br>Valor del descuento: ".$valorDescuento;
-echo "<br>Valor total a pagar: ".$valorTotalPagar;
+//punto 4 del taller
+echo "<br><br>Ejercicio 4 <br>";
+$numerodehoras=36;
+$valorhora1=20000;
+$valorhora2=25000;
+$sueldoSemanal=0;
+
+if($numerodehoras<=40)
+{
+    $sueldoSemanal=$numerodehoras*$valorhora1;
+    echo "Para un total de: ".$numerodehoras." Horas, se obtiene un valor hora de: $".$valorhora1;
+    echo "<br>El salario devengado en la semana es de: $".$sueldoSemanal;
+}
+elseif($numerodehoras>40)
+{
+    $sueldoSemanal=$numerodehoras*$valorhora2;
+    echo "Para un total de: ".$numerodehoras." Horas, se obtiene un valor hora de: $".$valorhora2;
+}
+
+
+//punto 5 del taller
+echo "<br><br>Ejercicio 5 <br>";
 
 
 
